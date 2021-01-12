@@ -13,7 +13,10 @@ class MstPersonality extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mst_personality', function (Blueprint $table) {
+            $table->id();
+            $table->string('type');
+            }); 
     }
 
     /**

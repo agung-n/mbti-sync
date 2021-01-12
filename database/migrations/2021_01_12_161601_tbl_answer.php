@@ -13,7 +13,12 @@ class TblAnswer extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_answer', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('id_user')->index();
+            $table->foreignId('id_question')->index();
+            $table->foreignId('id_answer')->index();
+            });  
     }
 
     /**

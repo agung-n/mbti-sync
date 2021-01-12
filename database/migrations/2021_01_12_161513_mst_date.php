@@ -13,7 +13,10 @@ class MstDate extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mst_date', function (Blueprint $table) {
+            $table->id();
+            $table->date('shift');
+            });  
     }
 
     /**

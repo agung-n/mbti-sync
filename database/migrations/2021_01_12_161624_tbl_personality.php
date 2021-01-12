@@ -13,7 +13,14 @@ class TblPersonality extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_personality', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('id_user')->index();
+            $table->integer('total_e');
+            $table->integer('total_s');
+            $table->integer('total_t');
+            $table->integer('total_j');
+            });
     }
 
     /**

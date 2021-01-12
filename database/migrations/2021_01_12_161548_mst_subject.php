@@ -13,7 +13,10 @@ class MstSubject extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mst_subject', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            });  
     }
 
     /**

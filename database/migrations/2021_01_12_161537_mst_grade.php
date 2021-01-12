@@ -13,7 +13,10 @@ class MstGrade extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mst_grade', function (Blueprint $table) {
+            $table->id();
+            $table->string('level');
+            }); 
     }
 
     /**

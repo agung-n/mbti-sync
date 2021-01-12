@@ -13,7 +13,10 @@ class MstRole extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mst_role', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            });   
     }
 
     /**

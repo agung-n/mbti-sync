@@ -13,7 +13,10 @@ class MstQuestion extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('mst_question', function (Blueprint $table) {
+            $table->id();
+            $table->string('text');
+            });  
     }
 
     /**

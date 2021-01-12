@@ -13,7 +13,15 @@ class TblAppointment extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_appointment', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('id_date')->index();
+            $table->foreignId('id_time')->index();
+            $table->foreignId('id_teacher')->index();
+            $table->foreignId('id_grade')->index();
+            $table->foreignId('id_subject')->index();
+            $table->foreignId('id_student')->index();
+            });  
     }
 
     /**
