@@ -18,8 +18,6 @@ use App\Http\Livewire\Question;
 |
 */
 
-
-
 Route::get('/', function () {
     return view('welcome');
 });
