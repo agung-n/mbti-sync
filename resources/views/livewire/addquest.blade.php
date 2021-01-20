@@ -41,24 +41,9 @@
         		<input wire:model="questId" type="hidden" name="questId" class="shadow appearance-none border rounded w-full py-2 px-3">
         	</div>
         	<div class="mb-2">
-        		<label for="questions" class="block">Question</label>	
-        		<input wire:model="questions" type="text" name="questions" class="shadow appearance-none border rounded w-full py-2 px-3">
+        		<label for="questiontext" class="block">Question</label>	
+        		<input wire:model="questiontext" type="text" name="questiontext" class="shadow appearance-none border rounded w-full py-2 px-3">
         		@error('title')<h1 class="text-red-500">{{$message}}</h1>@enderror
-        	</div>
-        	<div class="mb-2">
-        		<label for="answerA" class="block">Answer A</label>	
-        		<textarea wire:model="answerA" type="text" name="answerA" class="shadow appearance-none border rounded w-full py-2 px-3"></textarea>
-        		@error('description')<h1 class="text-red-500">{{$message}}</h1>@enderror
-        	</div>
-        	<div class="mb-2">
-        		<label for="answerB" class="block">Answer B</label>	
-        		<textarea wire:model="answerB" type="text" name="answerB" class="shadow appearance-none border rounded w-full py-2 px-3"></textarea>
-        		@error('description')<h1 class="text-red-500">{{$message}}</h1>@enderror
-        	</div>
-        	<div class="mb-2">
-        		<label for="persona" class="block">Persona</label>	
-        		<textarea wire:model="persona" type="text" name="persona" class="shadow appearance-none border rounded w-full py-2 px-3"></textarea>
-        		@error('description')<h1 class="text-red-500">{{$message}}</h1>@enderror
         	</div>
         </div>
       </div>
@@ -69,7 +54,7 @@
           </button>
         </span>
         <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
-          <button wire:click="hideModal()" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+          <button wire:click="hideAddQModal()" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
             Cancel
           </button>
         </span>
