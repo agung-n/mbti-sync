@@ -21,6 +21,7 @@ class MstAnswer extends Migration
             $table->integer('value_s');
             $table->integer('value_t');
             $table->integer('value_j');
+            $table->timestamps();
             });  
     }
 

@@ -16,6 +16,7 @@ class MstDate extends Migration
         Schema::create('mst_date', function (Blueprint $table) {
             $table->id();
             $table->date('shift');
+            $table->timestamps();
             });  
     }
 

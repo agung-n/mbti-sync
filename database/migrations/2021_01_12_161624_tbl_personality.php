@@ -20,6 +20,7 @@ class TblPersonality extends Migration
             $table->integer('total_s');
             $table->integer('total_t');
             $table->integer('total_j');
+            $table->timestamps();
             });
     }
 
