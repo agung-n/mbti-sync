@@ -18,6 +18,9 @@ use App\Http\Livewire\Question;
 |
 */
 
+Route::get('/question', Question::class);
+
+
 Route::get('/', function () {
     return view('welcome');
 });

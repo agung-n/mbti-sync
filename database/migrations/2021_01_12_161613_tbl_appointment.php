@@ -21,6 +21,7 @@ class TblAppointment extends Migration
             $table->foreignId('id_grade')->index();
             $table->foreignId('id_subject')->index();
             $table->foreignId('id_student')->index();
+            $table->timestamps();
             });  
     }
 

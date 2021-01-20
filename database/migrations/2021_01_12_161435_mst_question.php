@@ -16,6 +16,7 @@ class MstQuestion extends Migration
         Schema::create('mst_question', function (Blueprint $table) {
             $table->id();
             $table->string('text');
+            $table->timestamps();
             });  
     }
 

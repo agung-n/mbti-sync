@@ -1,12 +1,18 @@
 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg ">
-
+ 
  
 <div class="flex" >
 	<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-	<button wire:click="showModal()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+	<button wire:click="showAddQModal()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
 		Create Questions
 	</button>
-		@if($isOpen)
+		@if($addQuestion)
+			@include('livewire.addquest')
+		@endif	
+	<button wire:click="showAddQModal()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+		Create Questions
+	</button>
+		@if($addQuestion)
 			@include('livewire.addquest')
 		@endif	
 	</div>
@@ -47,10 +53,7 @@
 		@foreach($quest as $question)
 		<tr>
 			<td>{{$question->id}}</td>
-			<td>{{$question->questions}}</td>
-			<td>{{$question->answerA}}</td>
-			<td>{{$question->answerB}}</td>
-			<td>{{$question->persona}}</td>
+			<td>{{$question->questiontext}}</td>
 			<td>
 				<button wire:click="edit({{ $question->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
 				<button wire:click="delete({{ $question->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>

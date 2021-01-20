@@ -18,6 +18,7 @@ class TblAnswer extends Migration
             $table->foreignId('id_user')->index();
             $table->foreignId('id_question')->index();
             $table->foreignId('id_answer')->index();
+            $table->timestamps();
             });  
     }
 
