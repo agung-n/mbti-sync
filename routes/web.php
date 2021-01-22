@@ -6,6 +6,7 @@ use App\Http\Livewire\Psytest;
 use App\Http\Livewire\Schedule;
 use App\Http\Livewire\Teacherlist;
 use App\Http\Livewire\Question;
+use App\Http\Livewire\Answer;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ use App\Http\Livewire\Question;
 */
 
 Route::get('/question', Question::class);
+Route::get('/answer', Answer::class);
 
 
 Route::get('/', function () {
