@@ -48,14 +48,14 @@
 		@foreach($ans as $answer)
 		<tr>
 			<td>{{$answer->id}}</td>
-			<td>{{$answer->answertext}}</td>
-			<td>{{$answer->valuee}}</td>
-			<td>{{$answer->values}}</td>
-			<td>{{$answer->valuet}}</td>
-			<td>{{$answer->valuej}}</td>
+			<td>{{$answer->text}}</td>
+			<td>{{$answer->value_e}}</td>
+			<td>{{$answer->value_s}}</td>
+			<td>{{$answer->value_t}}</td>
+			<td>{{$answer->value_j}}</td>
 			<td>
-				<button wire:click="edit({{ $question->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
-				<button wire:click="delete({{ $question->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+				<button wire:click="edit({{ $answer->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
+				<button wire:click="delete({{ $answer->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
 			</td>
 		</tr>
 		@endforeach

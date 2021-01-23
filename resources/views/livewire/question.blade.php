@@ -53,7 +53,9 @@
 		@foreach($quest as $question)
 		<tr>
 			<td>{{$question->id}}</td>
-			<td>{{$question->questiontext}}</td>
+			<td>{{$question->text}}</td>
+			<td></td>
+			<td></td>
 			<td>
 				<button wire:click="edit({{ $question->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
 				<button wire:click="delete({{ $question->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>

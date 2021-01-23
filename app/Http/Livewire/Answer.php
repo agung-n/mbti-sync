@@ -22,7 +22,7 @@ class Answer extends Component
     );
     }
 
-        public function showAddAModal()		//ini untuk show dialog
+    public function showAddAModal()		//ini untuk show dialog
     {
     	$this->addAnswer = true;	 
     }
@@ -61,6 +61,10 @@ class Answer extends Component
     	$post = AnswerM::findOrFail($id);
     	$this->answerId = $id;
     	$this->answertext = $post->text;
+    	$this->valuee= $post->value_e;
+    	$this->values= $post->value_s;
+    	$this->valuet= $post->value_t;
+    	$this->valuej= $post->value_j;
 
     	$this->showAddAModal();
 
