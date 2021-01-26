@@ -41,6 +41,9 @@
         		<input wire:model="answerId" type="hidden" name="answerId" class="shadow appearance-none border rounded w-full py-2 px-3">
         	</div>
         	<div class="mb-2">
+        		<input wire:model="questionId" type="hidden" name="questionId" class="shadow appearance-none border rounded w-full py-2 px-3">
+        	</div>
+        	<div class="mb-2">
         		<label for="answertext" class="block">Answer</label>	
         		<input wire:model="answertext" type="text" name="answertext" class="shadow appearance-none border rounded w-full py-2 px-3">
         		@error('title')<h1 class="text-red-500">{{$message}}</h1>@enderror

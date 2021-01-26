@@ -41,7 +41,14 @@ class Answer extends Component
     	);
 
 
-    	AnswerM::updateOrCreate(['id' => $this->answerId],['id_question' => $this->questionId],['text' => $this->answertext],['value_e' => $this->valuee],['value_s' => $this->values],['value_t' => $this->valuet],['value_j' => $this->valuej]);
+    	AnswerM::updateOrCreate(
+    		['id' => $this->answerId],
+    		['id_question' => $this->questionId],
+    		['text' => $this->answertext],
+    		['value_e' => $this->valuee],
+    		['value_s' => $this->values],
+    		['value_t' => $this->valuet],
+    		['value_j' => $this->valuej]);
     	
     	$this->hideAddAModal();
 
