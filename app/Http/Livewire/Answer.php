@@ -17,7 +17,7 @@ class Answer extends Component
     	$searchParams = '%'.$this->search.'%';		//part ini buat searching
     	return view('livewire.answer',[				
     	'ans' => AnswerM::where('text','like', $searchParams)->latest()->paginate(5) //ini buat mecah list jadi berhalaman2
-//ok
+
     	]
     );
     }

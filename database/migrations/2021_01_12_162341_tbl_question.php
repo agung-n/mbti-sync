@@ -13,14 +13,11 @@ class TblQuestion extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_appointment', function (Blueprint $table) {
+        Schema::create('tbl_question', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_date')->index();
-            $table->foreignId('id_time')->index();
-            $table->foreignId('id_teacher')->index();
-            $table->foreignId('id_grade')->index();
-            $table->foreignId('id_subject')->index();
-            $table->foreignId('id_student')->index();
+            $table->foreignId('id_question')->index();
+            $table->foreignId('id_answera')->index();
+            $table->foreignId('id_answerb')->index();
             $table->timestamps();
             });  
     }

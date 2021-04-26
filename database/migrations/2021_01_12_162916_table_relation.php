@@ -16,7 +16,7 @@ class TableRelation extends Migration
         Schema::table('mst_user', function (Blueprint $table) {
             $table->foreign('id_personality')->references('id')->on('mst_personality');
             $table->foreign('id_role')->references('id')->on('mst_role');
-        });
+            });
 
         Schema::table('mst_answer', function (Blueprint $table) {
             $table->foreign('id_question')->references('id')->on('mst_question');
@@ -39,7 +39,8 @@ class TableRelation extends Migration
 
         Schema::table('tbl_question', function (Blueprint $table) {
             $table->foreign('id_question')->references('id')->on('mst_question');
-            $table->foreign('id_answer')->references('id')->on('mst_answer');
+            $table->foreign('id_answera')->references('id')->on('mst_answer');
+            $table->foreign('id_answerb')->references('id')->on('mst_answer');
             });
 
         Schema::table('tbl_personality', function (Blueprint $table) {
